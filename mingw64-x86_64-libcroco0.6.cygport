@@ -1,0 +1,18 @@
+CROSS_HOST="x86_64-w64-mingw32"
+ORIG_PN="libcroco"
+inherit cross gnome2
+
+NAME="mingw64-x86_64-libcroco0.6"
+VERSION=0.6.8
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="GNOME CSS parser library for Win64 toolchain"
+DESCRIPTION="Libcroco is a standalone CSS2 parsing and manipulation library.
+The parser provides a low level event driven SAC like API and a CSS object
+model-like API."
+
+DEPEND="gnome-common
+	pkgconfig(glib-2.0)
+	pkgconfig(libxml-2.0)"
+
+MAKEOPTS+=" bin_PROGRAMS= "
